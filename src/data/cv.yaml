@@ -1,7 +1,7 @@
 fr:
   name: "Adam Serghini"
-  title: "Ingénieur IA & Lead Développeur"
-  summary: "Ingénieur R&D spécialisé en Intelligence Artificielle avec plus de 4 années d'expérience en apprentissage profond, vision par ordinateur, orchestration LLM et management d'équipe. Expert en optimisation de pipelines ML temps réel et en refonte d'architectures logicielles. Passionné par l'innovation technologique et le leadership technique."
+  title: "AI Engineer – Agents, RAG & Computer Vision"
+  summary: "Ingénieur IA avec 4+ ans d'expérience combinant vision par ordinateur, systèmes multi-agents LLM et pipelines RAG. J'industrialise des solutions ML temps réel et je conçois des architectures agentiques en production. Background solide en deep learning (détection, segmentation, classification) avec une montée récente sur l'écosystème GenAI (LangChain, Claude, MCP)."
   mail: serghini.adam.84@gmail.com
   location: "84000 Avignon, France"
   github: Adam-Serghini
@@ -21,6 +21,8 @@ fr:
       - Prompt Engineering
       - Agent Orchestration
       - MCP
+      - LangChain
+      - RAG
     devops:
       - Python
       - Docker
@@ -31,32 +33,48 @@ fr:
       - Jira
       - Plotly
       - Dash
+      - React
+      - Grafana
   experiences:
     - company: "Hiphen"
-      position: "Lead Ingénieur IA"
+      position: "AI Automation Lead"
       location: "Avignon, France"
-      duration: "Janvier 2023 → Présent"
+      duration: "Juillet 2025 → Présent"
       icon: "hiphen.webp"
       isFormation: false
-      description: "Responsable de la refonte complète du pipeline d'apprentissage profond de l'entreprise, de la définition des problématiques jusqu'au déploiement des modèles en production. Direction du développement de solutions d'IA performantes, adaptées aux contraintes réelles de précision, rapidité et robustesse."
+      description: "Responsable de l'industrialisation des outils IA et de l'adoption des systèmes multi-agents au sein de l'entreprise."
       bullets:
-        - "Conception de pipelines ML de bout en bout : annotation, ré-annotation stratégique, suivi qualité, ré-entraînement et déploiement continu."
-        - "Développement de modèles de détection, segmentation (sémantique & instance) et classification en temps réel avec une précision supérieure à 95%."
-        - "Refonte du code de production via la création de packages réutilisables et mutualisation des modules d'apprentissage profond."
-        - "Développement de systèmes multi-agents et automatisation de workflows via orchestration LLM (Claude, MCP), réduisant de 30% le temps de développement et revue de code."
-        - "Pilotage d'une équipe technique composée de développeurs et stagiaires : définition des bonnes pratiques, accompagnement technique et suivi de montée en compétences."
-        - "Collaboration étroite avec les pôles R&D, Production et Marketing pour aligner les solutions IA aux besoins métiers."
+        - "Conception d'un kit de développement multi-agents déployé auprès de 10 développeurs, réduisant le temps de développement de 30% et le temps de revue de code de 75%"
+        - "Implémentation de pipelines RAG complets (LangChain, ChromaDB, Sentence-Transformers) avec gestion du chunking, citation des sources et garde-fous contre les hallucinations"
+        - "Développement de serveurs MCP rendant les APIs métier et données satellites accessibles en langage naturel aux équipes non-techniques, usage auparavant impossible"
+        - "Mise en place d'un système d'observabilité de l'usage IA : tracking des lignes de code générées, proportion de code Claude dans les PRs et taux d'acceptation, permettant de piloter l'adoption et mesurer le ROI"
+        - "Formation de 12 collaborateurs aux outils Anthropic (Claude Desktop, Claude Code, MCP), avec adoption effective au quotidien"
+        - "Livraison d'interfaces React en production après une montée en compétence de 2 semaines"
     - company: "Hiphen"
-      position: "Ingénieur R&D"
+      position: "AI Tech Lead"
       location: "Avignon, France"
-      duration: "Août 2021 → Janvier 2023"
+      duration: "Juillet 2023 → Juin 2025"
       icon: "hiphen.webp"
       isFormation: false
-      description: "Premier membre de l'équipe R&D de l'entreprise, évolution dans un environnement de développement agile, contribution à sa structuration et accompagnement de sa croissance jusqu'à 6 personnes."
+      description: "Responsable technique de l'équipe R&D, pilotage de la refonte du pipeline ML et standardisation des pratiques de développement."
       bullets:
-        - "Exploitation et fusion de données provenant de différents capteurs pour extraire des informations agronomiques pertinentes."
-        - "Création de maquettes et prototypes d'interfaces utilisateur pour les solutions d'analyse d'images."
-        - "Création et maintenance d'un boilerplate pour faciliter le développement de nouveaux modules."
+        - "Construction et pilotage d'une équipe de 6 personnes : participation au recrutement, onboarding et montée en compétences"
+        - "Refonte complète du pipeline ML (annotation → entraînement → déploiement), divisant par 10 le temps de livraison des données clients grâce à des modèles plus efficaces et une inférence optimisée"
+        - "Standardisation des pratiques de développement : création de boilerplates avec linters, formatters et type checking intégrés, améliorant significativement la qualité et la maintenabilité du code"
+        - "Développement d'outils de monitoring custom pour évaluer les performances des modèles CV"
+        - "Collaboration cross-fonctionnelle avec les pôles R&D, IT, Software Engineering, Production, Sales et Marketing"
+    - company: "Hiphen"
+      position: "Computer Vision Engineer"
+      location: "Avignon, France"
+      duration: "Août 2021 → Juin 2023"
+      icon: "hiphen.webp"
+      isFormation: false
+      description: "Développement et mise en production de modèles de vision par ordinateur temps réel pour l'agriculture de précision."
+      bullets:
+        - "Développement et mise en production de modèles de tri optique temps réel pour Moët & Chandon, analysant la qualité de l'intégralité des raisins dans leurs pressoirs (volume annuel en millions d'euros)"
+        - "Modèles temps réel pour le lin avec contrainte forte (3 images/seconde), détection, segmentation et classification avec précision >95%"
+        - "Traitement et fusion de données multi-capteurs : RGB, multispectral, hyperspectral, LiDAR, télémètre"
+        - "Premier membre de l'équipe R&D, contribution à sa structuration et à sa croissance de 1 à 6 personnes"
     - company: "Hiphen"
       position: "Stage"
       location: "Avignon, France"
@@ -104,8 +122,8 @@ fr:
 
 en:
   name: "Adam Serghini"
-  title: "AI Engineer & Lead Developer"
-  summary: "R&D Engineer specialized in Artificial Intelligence with over 4 years of experience in deep learning, computer vision, LLM orchestration, and team management. Expert in real-time ML pipeline optimization and software architecture redesign. Passionate about technological innovation and technical leadership."
+  title: "AI Engineer – Agents, RAG & Computer Vision"
+  summary: "AI Engineer with 4+ years of experience combining computer vision, LLM multi-agent systems, and RAG pipelines. I industrialize real-time ML solutions and design agentic architectures for production. Solid background in deep learning (detection, segmentation, classification) with recent focus on the GenAI ecosystem (LangChain, Claude, MCP)."
   mail: serghini.adam.84@gmail.com
   location: "84000 Avignon, France"
   github: Adam-Serghini
@@ -124,6 +142,8 @@ en:
       - Prompt Engineering
       - Agent Orchestration
       - MCP
+      - LangChain
+      - RAG
     devops:
       - Python
       - Docker
@@ -134,33 +154,49 @@ en:
       - Jira
       - Plotly
       - Dash
+      - React
+      - Grafana
 
   experiences:
     - company: "Hiphen"
-      position: "Lead AI Engineer"
+      position: "AI Automation Lead"
       location: "Avignon, France"
-      duration: "January 2023 → Present"
+      duration: "July 2025 → Present"
       icon: "hiphen.webp"
       isFormation: false
-      description: "Responsible for the complete overhaul of the company's deep learning pipeline, from problem definition to model deployment in production. Leading the development of high-performance AI solutions adapted to real-world constraints of accuracy, speed, and robustness."
+      description: "Responsible for industrializing AI tools and driving multi-agent system adoption across the company."
       bullets:
-        - "Design of end-to-end ML pipelines: annotation, strategic re-annotation, quality monitoring, retraining, and continuous deployment."
-        - "Development of real-time detection, segmentation (semantic & instance), and classification models with over 95% accuracy."
-        - "Production code refactoring through creation of reusable packages and consolidation of deep learning modules."
-        - "Development of multi-agent systems and workflow automation via LLM orchestration (Claude, MCP), reducing development and code review time by 30%."
-        - "Leading a technical team of developers and interns: definition of best practices, technical guidance, and skill development support."
-        - "Close collaboration with R&D, Production, and Marketing teams to align AI solutions with business needs."
+        - "Designed a multi-agent development kit deployed to 10 developers, reducing development time by 30% and code review time by 75%"
+        - "Implemented end-to-end RAG pipelines (LangChain, ChromaDB, Sentence-Transformers) with chunking, source citation, and hallucination guardrails"
+        - "Developed MCP servers making business APIs and satellite data accessible in natural language to non-technical teams, previously impossible use case"
+        - "Built an AI usage observability system: tracking generated code lines, Claude code proportion in PRs, and acceptance rate, enabling adoption steering and ROI measurement"
+        - "Trained 12 team members on Anthropic tools (Claude Desktop, Claude Code, MCP), achieving effective daily adoption"
+        - "Delivered production React interfaces after a 2-week upskilling period"
     - company: "Hiphen"
-      position: "R&D Engineer"
+      position: "AI Tech Lead"
       location: "Avignon, France"
-      duration: "August 2021 → January 2023"
+      duration: "July 2023 → June 2025"
       icon: "hiphen.webp"
       isFormation: false
-      description: "First member of the company's R&D team, evolved in an agile development environment, contributing to its structuring and supporting its growth to 6 people."
+      description: "Technical lead for the R&D team, driving ML pipeline overhaul and development practice standardization."
       bullets:
-        - "Exploitation and fusion of data from different sensors to extract relevant agronomic information."
-        - "Creation of mockups and prototypes of user interfaces for image analysis solutions."
-        - "Creation and maintenance of a boilerplate to facilitate the development of new modules."
+        - "Built and led a 6-person team: participated in recruitment, onboarding, and skill development"
+        - "Complete ML pipeline overhaul (annotation → training → deployment), reducing client data delivery time by 10x through more efficient models and optimized inference"
+        - "Standardized development practices: created boilerplates with integrated linters, formatters, and type checking, significantly improving code quality and maintainability"
+        - "Developed custom monitoring tools to evaluate CV model performance"
+        - "Cross-functional collaboration with R&D, IT, Software Engineering, Production, Sales and Marketing teams"
+    - company: "Hiphen"
+      position: "Computer Vision Engineer"
+      location: "Avignon, France"
+      duration: "August 2021 → June 2023"
+      icon: "hiphen.webp"
+      isFormation: false
+      description: "Development and deployment of real-time computer vision models for precision agriculture."
+      bullets:
+        - "Developed and deployed real-time optical sorting models for Moët & Chandon, analyzing grape quality across all their wine presses (annual volume in millions of euros)"
+        - "Real-time models for flax with strict constraints (3 images/second), detection, segmentation, and classification with >95% accuracy"
+        - "Multi-sensor data processing and fusion: RGB, multispectral, hyperspectral, LiDAR, rangefinder"
+        - "First member of the R&D team, contributed to its structuring and growth from 1 to 6 people"
     - company: "Hiphen"
       position: "Internship"
       location: "Avignon, France"

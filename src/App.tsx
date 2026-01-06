@@ -353,7 +353,7 @@ function App() {
             fontFamily: "'Arial', 'Helvetica', sans-serif",
             color: "#1a1a1a",
             lineHeight: "1.35",
-            fontSize: "10pt",
+            fontSize: "10.5pt",
           }}
         >
           {/* Header - Professional and Compact */}
@@ -399,9 +399,57 @@ function App() {
           {/* Summary */}
           <div style={{ marginBottom: "10px" }}>
             <div
-              style={{ fontSize: "9pt", color: "#333", textAlign: "justify" }}
+              style={{ fontSize: "9.5pt", color: "#333", textAlign: "justify" }}
             >
               {data.summary}
+            </div>
+          </div>
+
+          {/* Skills - moved before Experience */}
+          <div style={{ marginBottom: "10px" }}>
+            <div
+              style={{
+                fontSize: "10.5pt",
+                fontWeight: "700",
+                color: "#1a1a1a",
+                marginBottom: "4px",
+                textTransform: "uppercase",
+                letterSpacing: "0.3px",
+                borderBottom: "1px solid #999",
+                paddingBottom: "1px",
+              }}
+            >
+              {lang === "fr" ? "Compétences" : "Skills"}
+            </div>
+            <div style={{ marginBottom: "3px" }}>
+              <span
+                style={{ fontWeight: "600", fontSize: "9.5pt", color: "#333" }}
+              >
+                ML & Vision:
+              </span>{" "}
+              <span style={{ fontSize: "9.5pt", color: "#555" }}>
+                {data.skills.ml.join(" • ")}
+              </span>
+            </div>
+            <div style={{ marginBottom: "3px" }}>
+              <span
+                style={{ fontWeight: "600", fontSize: "9.5pt", color: "#333" }}
+              >
+                LLM & Agents:
+              </span>{" "}
+              <span style={{ fontSize: "9.5pt", color: "#555" }}>
+                {data.skills.llm.join(" • ")}
+              </span>
+            </div>
+            <div>
+              <span
+                style={{ fontWeight: "600", fontSize: "9.5pt", color: "#333" }}
+              >
+                {lang === "fr" ? "Développement & Outils:" : "Development & Tools:"}
+              </span>{" "}
+              <span style={{ fontSize: "9.5pt", color: "#555" }}>
+                {data.skills.devops.join(" • ")}
+              </span>
             </div>
           </div>
 
@@ -463,7 +511,7 @@ function App() {
                         <li
                           key={bidx}
                           style={{
-                            fontSize: "8.5pt",
+                            fontSize: "9pt",
                             color: "#444",
                             marginBottom: "0.5px",
                             lineHeight: "1.3",
@@ -477,10 +525,10 @@ function App() {
                 </div>
               ))}
 
-            {/* Education Section */}
+            {/* Education Section - Full details, no internships */}
             <div
               style={{
-                fontSize: "11pt",
+                fontSize: "10.5pt",
                 fontWeight: "700",
                 color: "#1a1a1a",
                 marginBottom: "5px",
@@ -494,7 +542,12 @@ function App() {
               {lang === "fr" ? "Formation" : "Education"}
             </div>
             {data.experiences
-              .filter((exp) => exp.isFormation)
+              .filter(
+                (exp) =>
+                  exp.isFormation &&
+                  !exp.position.toLowerCase().includes("stage") &&
+                  !exp.position.toLowerCase().includes("internship")
+              )
               .map((exp, idx) => (
                 <div key={idx} style={{ marginBottom: "7px" }}>
                   <div style={{ marginBottom: "2px" }}>
@@ -527,9 +580,9 @@ function App() {
                         <li
                           key={bidx}
                           style={{
-                            fontSize: "8.5pt",
+                            fontSize: "9pt",
                             color: "#444",
-                            lineHeight: "1.25",
+                            lineHeight: "1.3",
                           }}
                         >
                           {bullet}
@@ -540,11 +593,11 @@ function App() {
                 </div>
               ))}
           </div>
-          {/* Skills & Hobbies */}
-          <div style={{ marginBottom: "12px" }}>
+          {/* Publication - geodes only */}
+          <div style={{ marginBottom: "10px" }}>
             <div
               style={{
-                fontSize: "10pt",
+                fontSize: "10.5pt",
                 fontWeight: "700",
                 color: "#1a1a1a",
                 marginBottom: "4px",
@@ -555,56 +608,32 @@ function App() {
                 paddingBottom: "1px",
               }}
             >
-              {lang === "fr" ? "Compétences" : "Skills"}
+              {lang === "fr" ? "Publication" : "Publication"}
             </div>
-            <div style={{ marginBottom: "3px" }}>
-              <span
-                style={{ fontWeight: "600", fontSize: "9.5pt", color: "#333" }}
-              >
-                {lang === "fr" ? "ML & Vision:" : "ML & Vision:"}
-              </span>{" "}
-              <span style={{ fontSize: "9.5pt", color: "#555" }}>
-                {data.skills.ml.join(" • ")}
-              </span>
-            </div>
-            <div style={{ marginBottom: "3px" }}>
-              <span
-                style={{ fontWeight: "600", fontSize: "9.5pt", color: "#333" }}
-              >
-                {lang === "fr" ? "LLM & Agents:" : "LLM & Agents:"}
-              </span>{" "}
-              <span style={{ fontSize: "9.5pt", color: "#555" }}>
-                {data.skills.llm.join(" • ")}
-              </span>
-            </div>
-            <div style={{ marginBottom: "3px" }}>
-              <span
-                style={{ fontWeight: "600", fontSize: "9.5pt", color: "#333" }}
-              >
-                {lang === "fr"
-                  ? "Développement & Outils:"
-                  : "Development & Tools:"}
-              </span>{" "}
-              <span style={{ fontSize: "9.5pt", color: "#555" }}>
-                {data.skills.devops.join(" • ")}
-              </span>
-            </div>
-            <div>
-              <span
-                style={{ fontWeight: "600", fontSize: "9.5pt", color: "#333" }}
-              >
-                {lang === "fr" ? "Intérêts:" : "Interests:"}
-              </span>{" "}
-              <span style={{ fontSize: "9.5pt", color: "#555" }}>
-                {data.hobbies.join(", ")}
-              </span>
-            </div>
+            {data.publications
+              .filter((pub) => pub.title.toLowerCase().includes("geodes"))
+              .map((pub, index) => (
+                <div key={index}>
+                  <span
+                    style={{
+                      fontWeight: "600",
+                      fontSize: "9.5pt",
+                      color: "#1a1a1a",
+                    }}
+                  >
+                    {pub.title} ({pub.year})
+                  </span>
+                  <span style={{ fontSize: "9pt", color: "#555", marginLeft: "8px" }}>
+                    - {pub.description}
+                  </span>
+                </div>
+              ))}
           </div>
-          {/* Publications */}
+          {/* Hobbies */}
           <div style={{ marginBottom: "0" }}>
             <div
               style={{
-                fontSize: "10pt",
+                fontSize: "10.5pt",
                 fontWeight: "700",
                 color: "#1a1a1a",
                 marginBottom: "4px",
@@ -615,39 +644,11 @@ function App() {
                 paddingBottom: "1px",
               }}
             >
-              Publications
+              {lang === "fr" ? "Centres d'intérêt" : "Interests"}
             </div>
-            {data.publications.map((pub, index) => (
-              <div
-                key={index}
-                style={{
-                  marginBottom:
-                    index === data.publications.length - 1 ? "0" : "5px",
-                }}
-              >
-                <div
-                  style={{
-                    fontWeight: "600",
-                    fontSize: "9.5pt",
-                    color: "#1a1a1a",
-                  }}
-                >
-                  {pub.title} ({pub.year})
-                </div>
-                <div style={{ fontSize: "9pt", color: "#555" }}>
-                  {pub.description}
-                </div>
-                <div
-                  style={{
-                    fontSize: "9.5pt",
-                    color: "#666",
-                    fontStyle: "italic",
-                  }}
-                >
-                  {pub.url}
-                </div>
-              </div>
-            ))}
+            <div style={{ fontSize: "9.5pt", color: "#555" }}>
+              {data.hobbies.join(" • ")}
+            </div>
           </div>
         </div>
       </div>
