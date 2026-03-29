@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://Anis-Saa.github.io/cv",
+  "homepage": "https://anis-saa77.github.io/cv",
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.15",
     "@radix-ui/react-hover-card": "^1.1.14",
