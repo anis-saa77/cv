@@ -1,243 +1,207 @@
 fr:
-  name: "Adam Serghini"
-  title: "AI Engineer – Agents, RAG & Computer Vision"
-  summary: "Ingénieur IA avec 4+ ans d'expérience combinant vision par ordinateur, systèmes multi-agents LLM et pipelines RAG. J'industrialise des solutions ML temps réel et je conçois des architectures agentiques en production. Background solide en deep learning (détection, segmentation, classification) avec une montée récente sur l'écosystème GenAI (LangChain, Claude, MCP)."
-  mail: serghini.adam.84@gmail.com
+  name: "Anis Saa"
+  title: "Ingénieur en Intelligence Artificielle"
+  summary: "Ingénieur IA spécialisé en deep learning et Computer Vision, j'ai acquis une expérience pratique lors d'un stage chez Hiphen, entreprise spécialisée dans le phénotypage de plantes par imagerie. Curieux, rigoureux et adaptable, je me tiens en veille constante sur les avancées technologiques en IA, notamment en deep learning et outils LLM."
+  mail: saa.anis.pro@gmail.com
   location: "84000 Avignon, France"
-  github: Adam-Serghini
-  linkedin: adam-serghini
-  linkedinLabel: /adam-serghini
-  phone: +33.6.23.77.23.45
+  phone: "+33 7 68 68 35 92"
+  linkedin: "anis-saa-07937229a"
+  linkedinLabel: "Anis-SAA"
+  github: "anis-saa77"
+  githubLabel: "anis-saa"
   skills:
     ml:
-      - Pytorch
+      - PyTorch
       - Scikit-learn
       - OpenCV
-      - Roboflow
+      - NumPy
       - Pandas
-      - Numpy
-    llm:
-      - Claude
-      - Prompt Engineering
-      - Agent Orchestration
-      - MCP
+      - Roboflow
+      - timm
       - LangChain
-      - RAG
+      - Plotly
+      - Prompt Engineering
+      - Claude Code
+    llm:
+      - Flask
+      - PHP
+      - HTML
+      - CSS
+      - JavaScript
+      - SQL
+      - Cassandra
     devops:
       - Python
+      - C
+      - Java
       - Docker
-      - UV
       - Git
-      - CI/CD
+      - CircleCI
+      - UV
       - Bitbucket
       - Jira
-      - Plotly
-      - Dash
-      - React
-      - Grafana
   experiences:
     - company: "Hiphen"
-      position: "AI Automation Lead"
+      position: "Stage – Computer Vision & Deep Learning"
       location: "Avignon, France"
-      duration: "Juillet 2025 → Présent"
+      duration: "2025 (6 mois)"
       icon: "hiphen.webp"
       isFormation: false
-      description: "Responsable de l'industrialisation des outils IA et de l'adoption des systèmes multi-agents au sein de l'entreprise."
+      description: "Stage au sein de l'équipe R&D d'Hiphen, entreprise spécialisée dans le phénotypage de plantes par imagerie. Mise à jour et amélioration de la stack Deep Learning appliquée à l'analyse d'images agricoles."
       bullets:
-        - "Conception d'un kit de développement multi-agents déployé auprès de 10 développeurs, réduisant le temps de développement de 30% et le temps de revue de code de 75%"
-        - "Implémentation de pipelines RAG complets (LangChain, ChromaDB, Sentence-Transformers) avec gestion du chunking, citation des sources et garde-fous contre les hallucinations"
-        - "Développement de serveurs MCP rendant les APIs métier et données satellites accessibles en langage naturel aux équipes non-techniques, usage auparavant impossible"
-        - "Mise en place d'un système d'observabilité de l'usage IA : tracking des lignes de code générées, proportion de code Claude dans les PRs et taux d'acceptation, permettant de piloter l'adoption et mesurer le ROI"
-        - "Formation de 12 collaborateurs aux outils Anthropic (Claude Desktop, Claude Code, MCP), avec adoption effective au quotidien"
-        - "Livraison d'interfaces React en production après une montée en compétence de 2 semaines"
-    - company: "Hiphen"
-      position: "AI Tech Lead"
-      location: "Avignon, France"
-      duration: "Juillet 2023 → Juin 2025"
-      icon: "hiphen.webp"
+        - "Mise à jour de la stack Computer Vision : détection, segmentation et classification d'images avec contraintes d'inférence temps réel et d'entraînement rapide (PyTorch, OpenCV)."
+        - "Upload et gestion de données d'entraînement (images et modèles) sur AWS S3 ; organisation et versionnage des artefacts ML."
+        - "Montée en compétence sur le prompting et l'utilisation de Claude Code pour accélérer le développement et la revue de code."
+        - "Participation à la réflexion sur un modèle de données pour intégrer les modèles entraînés dans la base de données interne de l'entreprise."
+    - company: "Aix-Marseille Université"
+      position: "Tuteur Informatique"
+      location: "Aix-en-Provence, France"
+      duration: "Octobre 2023 → Avril 2024"
+      icon: "amu.jpg"
       isFormation: false
-      description: "Responsable technique de l'équipe R&D, pilotage de la refonte du pipeline ML et standardisation des pratiques de développement."
+      description: "Accompagnement pédagogique d'un étudiant en situation de handicap moteur et mental, avec adaptation continue du discours et des méthodes d'enseignement."
       bullets:
-        - "Construction et pilotage d'une équipe de 6 personnes : participation au recrutement, onboarding et montée en compétences"
-        - "Refonte complète du pipeline ML (annotation → entraînement → déploiement), divisant par 10 le temps de livraison des données clients grâce à des modèles plus efficaces et une inférence optimisée"
-        - "Standardisation des pratiques de développement : création de boilerplates avec linters, formatters et type checking intégrés, améliorant significativement la qualité et la maintenabilité du code"
-        - "Développement d'outils de monitoring custom pour évaluer les performances des modèles CV"
-        - "Collaboration cross-fonctionnelle avec les pôles R&D, IT, Software Engineering, Production, Sales et Marketing"
-    - company: "Hiphen"
-      position: "Computer Vision Engineer"
-      location: "Avignon, France"
-      duration: "Août 2021 → Juin 2023"
-      icon: "hiphen.webp"
-      isFormation: false
-      description: "Développement et mise en production de modèles de vision par ordinateur temps réel pour l'agriculture de précision."
-      bullets:
-        - "Développement et mise en production de modèles de tri optique temps réel pour Moët & Chandon, analysant la qualité de l'intégralité des raisins dans leurs pressoirs (volume annuel en millions d'euros)"
-        - "Modèles temps réel pour le lin avec contrainte forte (3 images/seconde), détection, segmentation et classification avec précision >95%"
-        - "Traitement et fusion de données multi-capteurs : RGB, multispectral, hyperspectral, LiDAR, télémètre"
-        - "Premier membre de l'équipe R&D, contribution à sa structuration et à sa croissance de 1 à 6 personnes"
-    - company: "Hiphen"
-      position: "Stage"
-      location: "Avignon, France"
-      duration: "Janvier 2021 → Août 2021"
-      icon: "hiphen.webp"
-      isFormation: true
-      description: "Mise en place d'un processus de segmentation d'instances sur images géoréférencées, résolvant un goulot d'étranglement critique dans le pipeline de traitement de l'entreprise."
-      bullets:
-        - "Entraînement et déploiement d'un Mask R-CNN pour la segmentation d'instances sur images géoréférencées."
-    - company: "Givaudan"
-      position: "Stage"
-      location: "Avignon, France"
-      duration: "Août 2020"
-      icon: "givaudan.svg"
-      isFormation: true
-      description: "Développement d'un outil de suivi temporel pour quantifier les tâches réalisées par les employés, améliorant la gestion des ressources et optimisant les coûts opérationnels."
-      bullets:
-        - "Conception et développement complet sous WinDev : maquettes, spécifications, implémentation, déploiement et intégration des premiers retours utilisateurs."
+        - "Vulgarisation et reformulation de concepts informatiques complexes, avec adaptation du niveau d'explication selon les besoins de l'étudiant."
+        - "Prise de notes structurée et synthèse des cours pour compenser les difficultés motrices."
     - company: "Centre d'Enseignement et de Recherche en Informatique - CERI"
-      position: "Master Intelligence Artificielle et Ingénierie Logicielle"
+      position: "M2 Intelligence Artificielle"
       location: "Avignon, France"
-      duration: "2016 → 2021"
+      duration: "Septembre 2024 → Juin 2026"
       icon: "au.png"
       isFormation: true
-      description: "Master obtenu dans un établissement à forte orientation recherche, avec une spécialisation en Intelligence Artificielle et Traitement du Langage Naturel."
+      description: "Master en Intelligence Artificielle au CERI d'Avignon, avec conception et mise en œuvre de projets appliqués en deep learning et traitement du langage."
       bullets:
-        - "Mise en œuvre de modèles RNN, LSTM et Transformers pour des tâches de traitement du langage naturel (classification, génération, résumé de texte)."
+        - "Modèle de traduction G2P : ajustement d'un Transformer pour la traduction phonème-graphème (86% de mots correctement traduits)."
+        - "Assistant robot Pepper : déploiement d'un LLM pour un assistant conversationnel temps réel, avec gestion de la communication client-serveur."
+        - "Conception de modèles neuronaux (MLP, LSTM, Encoder-Decoder) : applications en bioinformatique (prédiction de structures protéiques) et analyse de sentiment (TripAdvisor)."
+    - company: "Aix-Marseille Université"
+      position: "Licence Sciences Informatique"
+      location: "Aix-en-Provence, France"
+      duration: "Septembre 2021 → Juin 2024"
+      icon: "amu.jpg"
+      isFormation: true
+      description: "Formation en sciences informatiques avec une base pluridisciplinaire en mathématiques, mécanique et physique."
+      bullets:
+        - "Compilateur en Java : conception et implémentation d'un compilateur pour un langage fictif inspiré du Pascal (analyse lexicale, syntaxique et sémantique)."
+        - "Application de recettes : développement d'une application web connectée à une API externe de recettes, dans le cadre d'un projet tutoré en équipe."
   hobbies:
     - E-sport
     - Volley-ball
-    - Cuisine
+    - Veille technologique
   publications:
-    - title: "geodes-sentinel2"
-      year: 2025
-      description: "Package Python open-source pour le téléchargement, prétraitement et traitement d'images satellites Sentinel-2. Permet aux chercheurs d'extraire des indices agricoles (NDVI, etc.) avec tests automatisés CI/CD. Disponible sur PyPI et GitHub."
-      url: "https://github.com/Adam-Serghini/geodes-sentinel2"
-    - title: "GWFSS: Wheat Semantic Segmentation Dataset"
+    - title: "OCR – Indexation de revues bibliographiques"
       year: 2024
-      description: "Dataset open-source pour la segmentation sémantique d'images de blé."
-      url: "https://www.global-wheat.com/gwfss.html"
-    # - title: "Prédiction de l'humidité des tournesols par auto-encodeurs"
-    #   year: 2024
-    #   description: "Prédiction de l'humidité des tournesols par auto-encodeurs pour l'agriculture de précision."
-    #   url: "https://helexproject.eu/fr/le-projet-helex/"
+      duration: "Juin 2024"
+      location: "Avignon"
+      description: "Reconnaissance optique de caractères (OCR) appliquée à la détection et l'extraction de numéros de page dans des revues bibliographiques numérisées. Le système permet l'indexation automatique des noms d'auteurs et des titres d'articles à partir des pages identifiées."
+      url: "#"
+    - title: "Jeu 2D type Zelda"
+      year: 2023
+      duration: "Juin 2023"
+      location: "Aix-en-Provence"
+      description: "Développement d'un RPG 2D en Python inspiré de la série Zelda. Gestion et coordination d'une équipe de développeurs : répartition des tâches, intégration des contributions."
+      url: "#"
 
 en:
-  name: "Adam Serghini"
-  title: "AI Engineer – Agents, RAG & Computer Vision"
-  summary: "AI Engineer with 4+ years of experience combining computer vision, LLM multi-agent systems, and RAG pipelines. I industrialize real-time ML solutions and design agentic architectures for production. Solid background in deep learning (detection, segmentation, classification) with recent focus on the GenAI ecosystem (LangChain, Claude, MCP)."
-  mail: serghini.adam.84@gmail.com
+  name: "Anis Saa"
+  title: "Artificial Intelligence Engineer"
+  summary: "AI Engineer specialized in deep learning and Computer Vision, with hands-on experience gained during an internship at Hiphen, a company specialized in plant phenotyping through imagery. Curious, rigorous, and adaptable, I actively follow technological advances in AI, particularly in deep learning and LLM tooling."
+  mail: saa.anis.pro@gmail.com
   location: "84000 Avignon, France"
-  github: Adam-Serghini
-  phone: +33.6.23.77.23.45
-  linkedin: adam-serghini
+  phone: "+33 7 68 68 35 92"
+  linkedin: "anis-saa-07937229a"
+  linkedinLabel: "Anis-SAA"
+  github: "anis-saa77"
+  githubLabel: "anis-saa"
   skills:
     ml:
-      - Pytorch
+      - PyTorch
       - Scikit-learn
       - OpenCV
-      - Roboflow
+      - NumPy
       - Pandas
-      - Numpy
-    llm:
-      - Claude
-      - Prompt Engineering
-      - Agent Orchestration
-      - MCP
+      - Roboflow
+      - timm
       - LangChain
-      - RAG
+      - Plotly
+      - Prompt Engineering
+      - Claude Code
+    llm:
+      - Flask
+      - PHP
+      - HTML
+      - CSS
+      - JavaScript
+      - SQL
+      - Cassandra
     devops:
       - Python
+      - C
+      - Java
       - Docker
-      - UV
       - Git
-      - CI/CD
+      - CircleCI
+      - UV
       - Bitbucket
       - Jira
-      - Plotly
-      - Dash
-      - React
-      - Grafana
-
   experiences:
     - company: "Hiphen"
-      position: "AI Automation Lead"
+      position: "Internship – Computer Vision & Deep Learning"
       location: "Avignon, France"
-      duration: "July 2025 → Present"
+      duration: "2025 (6 months)"
       icon: "hiphen.webp"
       isFormation: false
-      description: "Responsible for industrializing AI tools and driving multi-agent system adoption across the company."
+      description: "Internship within Hiphen's R&D team, a company specialized in plant phenotyping through imagery. Update and improvement of the Deep Learning stack applied to agricultural image analysis."
       bullets:
-        - "Designed a multi-agent development kit deployed to 10 developers, reducing development time by 30% and code review time by 75%"
-        - "Implemented end-to-end RAG pipelines (LangChain, ChromaDB, Sentence-Transformers) with chunking, source citation, and hallucination guardrails"
-        - "Developed MCP servers making business APIs and satellite data accessible in natural language to non-technical teams, previously impossible use case"
-        - "Built an AI usage observability system: tracking generated code lines, Claude code proportion in PRs, and acceptance rate, enabling adoption steering and ROI measurement"
-        - "Trained 12 team members on Anthropic tools (Claude Desktop, Claude Code, MCP), achieving effective daily adoption"
-        - "Delivered production React interfaces after a 2-week upskilling period"
-    - company: "Hiphen"
-      position: "AI Tech Lead"
-      location: "Avignon, France"
-      duration: "July 2023 → June 2025"
-      icon: "hiphen.webp"
+        - "Updated the Computer Vision stack: image detection, segmentation, and classification with real-time inference and fast training constraints (PyTorch, OpenCV)."
+        - "Uploaded and managed training data (images and models) on AWS S3; organized and versioned ML artifacts."
+        - "Developed proficiency in prompting and Claude Code usage to accelerate development and code review workflows."
+        - "Contributed to the design of a data model to integrate trained models into the company's internal database."
+    - company: "Aix-Marseille University"
+      position: "Computer Science Tutor"
+      location: "Aix-en-Provence, France"
+      duration: "October 2023 → April 2024"
+      icon: "amu.jpg"
       isFormation: false
-      description: "Technical lead for the R&D team, driving ML pipeline overhaul and development practice standardization."
+      description: "Pedagogical support for a student with motor and cognitive disabilities, with continuous adaptation of teaching methods and communication style."
       bullets:
-        - "Built and led a 6-person team: participated in recruitment, onboarding, and skill development"
-        - "Complete ML pipeline overhaul (annotation → training → deployment), reducing client data delivery time by 10x through more efficient models and optimized inference"
-        - "Standardized development practices: created boilerplates with integrated linters, formatters, and type checking, significantly improving code quality and maintainability"
-        - "Developed custom monitoring tools to evaluate CV model performance"
-        - "Cross-functional collaboration with R&D, IT, Software Engineering, Production, Sales and Marketing teams"
-    - company: "Hiphen"
-      position: "Computer Vision Engineer"
+        - "Simplification and reformulation of complex computer science concepts, adapting the level of explanation to the student's needs."
+        - "Structured note-taking and course synthesis to compensate for motor difficulties."
+    - company: "Centre d'Enseignement et de Recherche en Informatique - CERI"
+      position: "M2 Artificial Intelligence"
       location: "Avignon, France"
-      duration: "August 2021 → June 2023"
-      icon: "hiphen.webp"
-      isFormation: false
-      description: "Development and deployment of real-time computer vision models for precision agriculture."
-      bullets:
-        - "Developed and deployed real-time optical sorting models for Moët & Chandon, analyzing grape quality across all their wine presses (annual volume in millions of euros)"
-        - "Real-time models for flax with strict constraints (3 images/second), detection, segmentation, and classification with >95% accuracy"
-        - "Multi-sensor data processing and fusion: RGB, multispectral, hyperspectral, LiDAR, rangefinder"
-        - "First member of the R&D team, contributed to its structuring and growth from 1 to 6 people"
-    - company: "Hiphen"
-      position: "Internship"
-      location: "Avignon, France"
-      duration: "January 2021 → August 2021"
-      icon: "hiphen.webp"
-      isFormation: true
-      description: "Implementation of an instance segmentation process on georeferenced images, solving a critical bottleneck in the company's processing pipeline."
-      bullets:
-        - "Training and deployment of a Mask R-CNN for instance segmentation on georeferenced images."
-    - company: "Givaudan"
-      position: "Internship"
-      location: "Avignon, France"
-      duration: "August 2020"
-      icon: "givaudan.svg"
-      isFormation: true
-      description: "Development of a time-tracking tool to quantify tasks completed by employees, improving resource management and optimizing operational costs."
-      bullets:
-        - "Complete design and development in WinDev: mockups, specifications, implementation, deployment, and integration of initial user feedback."
-    - company: "Center for Teaching and Research in Computer Science - CERI"
-      position: "Master's in Artificial Intelligence and Software Engineering"
-      location: "Avignon, France"
-      duration: "2016 → 2021"
+      duration: "September 2024 → June 2026"
       icon: "au.png"
       isFormation: true
-      description: "Master's degree obtained from a research-oriented institution, with specialization in Artificial Intelligence and Natural Language Processing."
+      description: "Master's in Artificial Intelligence at CERI Avignon, with design and implementation of applied deep learning and NLP projects."
       bullets:
-        - "Implementation of RNN, LSTM, and Transformer models for natural language processing tasks (classification, generation, text summarization)."
+        - "G2P translation model: fine-tuned a Transformer for phoneme-to-grapheme translation (86% of words correctly translated)."
+        - "Pepper robot assistant: deployed an LLM for a real-time conversational assistant, with client-server communication management."
+        - "Neural model design (MLP, LSTM, Encoder-Decoder): applications in bioinformatics (protein structure prediction) and sentiment analysis (TripAdvisor)."
+    - company: "Aix-Marseille University"
+      position: "Bachelor's in Computer Science"
+      location: "Aix-en-Provence, France"
+      duration: "September 2021 → June 2024"
+      icon: "amu.jpg"
+      isFormation: true
+      description: "Computer science degree with a multidisciplinary foundation in mathematics, mechanics, and physics."
+      bullets:
+        - "Java compiler: design and implementation of a compiler for a fictional Pascal-inspired language (lexical, syntactic, and semantic analysis)."
+        - "Recipe application: development of a web application connected to an external recipe API, as part of a supervised team project."
   hobbies:
     - E-sports
     - Volleyball
-    - Cooking
+    - Tech Watch
   publications:
-    - title: "geodes-sentinel2"
-      year: 2025
-      description: "Open-source Python package for downloading, preprocessing, and processing Sentinel-2 satellite imagery. Enables researchers to extract agricultural indices (NDVI, etc.) with automated CI/CD testing. Available on PyPI and GitHub."
-      url: "https://github.com/Adam-Serghini/geodes-sentinel2"
-    - title: "GWFSS: Wheat Semantic Segmentation Dataset"
+    - title: "OCR – Bibliographic Journal Indexing"
       year: 2024
-      description: "Open-source dataset for semantic segmentation of wheat imagery."
-      url: "https://www.global-wheat.com/gwfss.html"
-    - title: "Sunflower Moisture Prediction Using Autoencoders"
-      year: 2024
-      description: "Sunflower moisture prediction using autoencoders for precision agriculture."
-      url: "https://helexproject.eu/fr/le-projet-helex/"
+      duration: "June 2024"
+      location: "Avignon"
+      description: "Optical character recognition (OCR) applied to the detection and extraction of page numbers in digitized bibliographic journals. The system enables automatic indexing of author names and article titles from the identified pages."
+      url: "#"
+    - title: "2D Zelda-style game"
+      year: 2023
+      duration: "June 2023"
+      location: "Aix-en-Provence"
+      description: "Development of a 2D RPG in Python inspired by the Zelda series. Team management and coordination: task distribution and integration of contributions."
+      url: "#"

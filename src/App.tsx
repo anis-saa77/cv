@@ -13,8 +13,8 @@ import {
   Linkedin,
   Phone,
   Sparkles,
-  BookOpen,
-  ExternalLink,
+  Briefcase,
+  FolderGit2,
 } from "lucide-react";
 import { useState, useRef } from "react";
 import { Button } from "./components/ui/button";
@@ -24,7 +24,7 @@ import { SkillBadge } from "./components/custom/skill-badge";
 import { cvData } from "./data/cv";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "./components/mode-toggle";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { useReactToPrint } from "react-to-print";
 
 // Custom hook for language management
@@ -54,7 +54,7 @@ function App() {
   };
   const handlePrint = useReactToPrint({
     contentRef: printRef,
-    documentTitle: `CV_Adam_Serghini_${lang.toUpperCase()}`,
+    documentTitle: `CV_Anis_Saa_${lang.toUpperCase()}`,
     onBeforePrint: handleBeforePrint,
     onAfterPrint: handleAfterPrint,
     pageStyle: `
@@ -80,12 +80,15 @@ function App() {
         <aside className="w-full lg:w-1/4 bg-gray-100 dark:bg-gray-900 p-4 lg:p-6 flex flex-col gap-4">
           {/* Photo */}
           <img
-            src={`${import.meta.env.BASE_URL}res/Adam.png`}
+            src={`${import.meta.env.BASE_URL}res/Anis.png`}
             className="rounded-xl w-full max-w-48 mx-auto lg:mx-0 lg:max-w-full"
-            alt="Adam Serghini"
+            alt="Anis Saa"
           />
 
-          {/* Contacts + Réseaux */}
+          {/* Contact */}
+          <p className="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 px-1">
+            Contact
+          </p>
           <Card className="p-4 rounded-xl border gap-2">
             <div className="flex items-center gap-2 text-sm">
               <HomeIcon size="16" className="text-gray-500" /> {data.location}
@@ -101,29 +104,34 @@ function App() {
             >
               <AtSign size="16" className="text-gray-500" /> {data.mail}
             </a>
-            <a
-              href={`https://www.linkedin.com/in/${data.linkedin}/`}
-              className="flex items-center gap-2 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Linkedin size="16" className="text-gray-500" /> /adam-Serghini
-            </a>
-            <a
-              href={`https://github.com/${data.github}`}
-              className="flex items-center gap-2 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Github size="16" className="text-gray-500" /> /Adam-Serghini
-            </a>
+            {data.linkedin && (
+              <a
+                href={`https://www.linkedin.com/in/${data.linkedin}/`}
+                className="flex items-center gap-2 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin size="16" className="text-gray-500" /> /{data.linkedinLabel ?? data.linkedin}
+              </a>
+            )}
+            {data.github && (
+              <a
+                href={`https://github.com/${data.github}`}
+                className="flex items-center gap-2 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github size="16" className="text-gray-500" /> /{data.githubLabel ?? data.github}
+              </a>
+            )}
           </Card>
           {/* Skills */}
+          <p className="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 px-1">
+            {lang === "fr" ? "Compétences" : "Skills"}
+          </p>
           <Card className="p-4 rounded-xl border gap-3">
             <Badge variant="secondary" className="text-xs font-semibold">
-              {lang === "fr"
-                ? "Compétences | ML & Vision"
-                : "Skills | ML & Vision"}
+              {lang === "fr" ? "IA & Data" : "AI & Data"}
             </Badge>
             <div className="flex flex-row flex-wrap items-start content-start gap-1.5">
               {data.skills.ml.map((skill, index) => (
@@ -133,9 +141,7 @@ function App() {
           </Card>
           <Card className="p-4 rounded-xl border gap-3">
             <Badge variant="secondary" className="text-xs font-semibold">
-              {lang === "fr"
-                ? "Compétences | LLM & Agents"
-                : "Skills | LLM & Agents"}
+              {lang === "fr" ? "Web & BDD" : "Web & Databases"}
             </Badge>
             <div className="flex flex-row flex-wrap items-start content-start gap-1.5">
               {data.skills.llm.map((skill, index) => (
@@ -145,9 +151,7 @@ function App() {
           </Card>
           <Card className="p-4 rounded-xl border gap-3">
             <Badge variant="secondary" className="text-xs font-semibold">
-              {lang === "fr"
-                ? "Compétences | Développement & Outils"
-                : "Skills | Development & Tools"}
+              {lang === "fr" ? "Développement & Outils" : "Development & Tools"}
             </Badge>
             <div className="flex flex-row flex-wrap items-start content-start gap-1.5">
               {data.skills.devops.map((skill, index) => (
@@ -156,10 +160,10 @@ function App() {
             </div>
           </Card>
           {/* Interests */}
-          <Card className="p-4 rounded-xl border gap-2 justify-between gap-1 content-between">
-            <Badge className="flex gap-1 items-center" variant="secondary">
-              <Sparkles /> {lang === "fr" ? "Centres d'intérêt" : "Hobbies"}
-            </Badge>
+          <p className="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 px-1">
+            {lang === "fr" ? "Centres d'intérêt" : "Hobbies"}
+          </p>
+          <Card className="p-4 rounded-xl border gap-2">
             {data.hobbies.map((hobby, index) => {
               const hobbyIcons: { [key: string]: React.JSX.Element } = {
                 "Voyage & exploration": <Plane size="16" />,
@@ -172,6 +176,8 @@ function App() {
                 Cooking: <ChefHat size="16" />,
                 "Volley-ball": <Volleyball size="16" />,
                 Volleyball: <Volleyball size="16" />,
+                "Veille technologique": <Sparkles size="16" />,
+                "Tech Watch": <Sparkles size="16" />,
               };
               return (
                 <div key={index} className="flex gap-1 items-center">
@@ -182,34 +188,6 @@ function App() {
             })}
           </Card>
 
-          <Card className="p-4 rounded-xl border gap-2 justify-between gap-1 content-between border border-orange-600">
-            <Badge
-              variant="secondary"
-              className="mb-2 flex items-center gap-2 text-orange-600 border border-orange-600"
-            >
-              <BookOpen size="16" />
-              Publications
-            </Badge>
-            <CardContent className="text-sm text-muted-foreground space-y-1">
-              {data.publications.map((pub, index) => (
-                <div key={index}>
-                  <strong>
-                    {pub.year} - {pub.title}
-                  </strong>
-                  <p>{pub.description}</p>
-                  <a
-                    href={pub.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-orange-600 hover:underline mt-1"
-                  >
-                    {lang === "fr" ? "Visiter le site" : "Visit website"}
-                    <ExternalLink size="16" />
-                  </a>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
         </aside>
 
         {/* Colonne droite : 2/3 */}
@@ -227,8 +205,8 @@ function App() {
                 variant="secondary"
                 className="flex items-center gap-1 text-xs sm:text-sm"
               >
-                <p className="font-extrabold italic text-purple-300">XP</p>
-                4+ ans
+                <p className="font-extrabold italic text-purple-300">M2</p>
+                {lang === "fr" ? "Intelligence Artificielle" : "Artificial Intelligence"}
               </Badge>
               <div className="flex items-center gap-1">
                 <img
@@ -275,7 +253,7 @@ function App() {
           <section className="mb-6 m-3">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-blue-400 drop-shadow-lg mb-3">
               <span className="bg-gradient-to-r from-neutral-500 to-neutral-400 text-transparent bg-clip-text">
-                Adam SERGHINI
+                Anis SAA
               </span>
             </h1>
             <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -285,6 +263,14 @@ function App() {
           <section className="p-4 space-y-6">
             {/* Cartes en ligne */}
             <div className="flex flex-col gap-4 w-full">
+              {/* Experience Split Line */}
+              <div className="flex items-center gap-3 my-2">
+                <Briefcase size="36" className="text-blue-500" />
+                <span className="text-lg font-bold text-blue-500">
+                  {lang === "fr" ? "Expérience" : "Experience"}
+                </span>
+                <div className="flex-grow h-0.5 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 rounded-full"></div>
+              </div>
               {/* Work Experience */}
               {data.experiences
                 .filter((exp) => !exp.isFormation)
@@ -339,6 +325,26 @@ function App() {
                     </ul>
                   </ExperienceCard>
                 ))}
+              {/* Projets personnels */}
+              <div className="flex items-center gap-3 my-6">
+                <FolderGit2 size="36" className="text-purple-500" />
+                <span className="text-lg font-bold text-purple-500">
+                  {lang === "fr" ? "Projets personnels" : "Personal Projects"}
+                </span>
+                <div className="flex-grow h-0.5 bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 rounded-full"></div>
+              </div>
+              {data.publications.map((project, idx) => (
+                <ExperienceCard
+                  key={"project-" + idx}
+                  company={project.title}
+                  position={String(project.year)}
+                  location={project.location ?? ""}
+                  duration={project.duration ?? ""}
+                  icon=""
+                >
+                  <p className="text-sm text-muted-foreground">{project.description}</p>
+                </ExperienceCard>
+              ))}
             </div>
           </section>
         </main>
@@ -392,8 +398,9 @@ function App() {
                 color: "#555",
               }}
             >
-              {data.location} • {data.mail} • {data.phone} • LinkedIn:{" "}
-              {data.linkedin} • GitHub: {data.github}
+              {data.location} • {data.mail} • {data.phone}
+              {data.linkedin && ` • LinkedIn: ${data.linkedin}`}
+              {data.github && ` • GitHub: ${data.github}`}
             </div>
           </div>
           {/* Summary */}
@@ -425,7 +432,7 @@ function App() {
               <span
                 style={{ fontWeight: "600", fontSize: "9.5pt", color: "#333" }}
               >
-                ML & Vision:
+                {lang === "fr" ? "IA & Data:" : "AI & Data:"}
               </span>{" "}
               <span style={{ fontSize: "9.5pt", color: "#555" }}>
                 {data.skills.ml.join(" • ")}
@@ -435,7 +442,7 @@ function App() {
               <span
                 style={{ fontWeight: "600", fontSize: "9.5pt", color: "#333" }}
               >
-                LLM & Agents:
+                {lang === "fr" ? "Web & BDD:" : "Web & Databases:"}
               </span>{" "}
               <span style={{ fontSize: "9.5pt", color: "#555" }}>
                 {data.skills.llm.join(" • ")}
@@ -593,7 +600,7 @@ function App() {
                 </div>
               ))}
           </div>
-          {/* Publication - geodes only */}
+          {/* Projets */}
           <div style={{ marginBottom: "10px" }}>
             <div
               style={{
@@ -608,10 +615,9 @@ function App() {
                 paddingBottom: "1px",
               }}
             >
-              {lang === "fr" ? "Publication" : "Publication"}
+              {lang === "fr" ? "Projets personnels" : "Personal Projects"}
             </div>
             {data.publications
-              .filter((pub) => pub.title.toLowerCase().includes("geodes"))
               .map((pub, index) => (
                 <div key={index}>
                   <span

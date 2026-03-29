@@ -24,6 +24,8 @@ export interface Publication {
   year: number;
   description: string;
   url: string;
+  location?: string;
+  duration?: string;
 }
 
 export interface CVData {
@@ -32,8 +34,9 @@ export interface CVData {
   summary: string;
   mail: string;
   location: string;
-  github: string;
-  linkedin: string;
+  github?: string;
+  githubLabel?: string;
+  linkedin?: string;
   linkedinLabel?: string;
   phone: string;
   skills: Skill;

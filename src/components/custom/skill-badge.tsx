@@ -6,10 +6,22 @@ export const SkillBadge = ({ skill }: { skill: string }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
+  // Some skill names don't match their simpleicons slug
+  const slugOverrides: Record<string, string> = {
+    "html": "html5",
+    "scikit-learn": "scikitlearn",
+    "langchain": "langchain",
+    "plotly": "plotly",
+    "uv": "astral",
+    "bitbucket": "bitbucket",
+    "jira": "jira",
+    "circleci": "circleci",
+    "cassandra": "apachecassandra",
+  };
+  const slug = slugOverrides[skill.toLowerCase()] ?? skill.toLowerCase().replace(/\s+/g, "");
+
   // Build CDN and local URLs
-  const cdnUrl = `https://cdn.simpleicons.org/${skill
-    .toLowerCase()
-    .replace(/\s+/g, "")}`;
+  const cdnUrl = `https://cdn.simpleicons.org/${slug}`;
   const localUrl = `${import.meta.env.BASE_URL}icon/${skill.replace(
     /\s+/g,
     ""

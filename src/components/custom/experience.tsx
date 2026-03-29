@@ -25,12 +25,14 @@ export function ExperienceCard({
       <div className="flex flex-col sm:flex-row justify-between items-start">
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-1">
-            <img
-              width="20px"
-              src={`${import.meta.env.BASE_URL}icon/${icon}`}
-              alt={`${company} logo`}
-              className="rounded-sm"
-            />
+            {icon && (
+              <img
+                width="20px"
+                src={`${import.meta.env.BASE_URL}icon/${icon}`}
+                alt={`${company} logo`}
+                className="rounded-sm"
+              />
+            )}
             <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100">
               {company}
             </h3>
